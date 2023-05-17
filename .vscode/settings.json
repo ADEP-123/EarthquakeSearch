@@ -1,0 +1,8 @@
+{
+  "conventionalCommits.scopes": [
+    "form",
+    "controlador",
+    "tipoEntrada",
+    "iniciador"
+  ]
+}
