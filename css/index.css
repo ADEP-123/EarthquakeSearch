@@ -32,6 +32,15 @@ body{
     height: 20%;
     background-color: bisque;
 }
+#reglas{
+    text-align: justify;
+    padding: 1%;
+    
+}
+#reglas ul{
+    padding-left: 5%;
+}
+
 
 /*Panel derech*/
 #cuerpoderech{
