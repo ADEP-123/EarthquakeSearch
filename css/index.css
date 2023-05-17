@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    background-color: rgb(40, 153, 252);
+}
+/*Header*/
+#header{
+    height: 15%;
+    background-color: blueviolet;
+}
+
+/*Cuerpo*/
+#cuerpo{
+    height: 85%;
+    background-color: rgb(204, 231, 163);
+    display: flex;
+}
+/*Panel Izq*/
+#cuerpoizq{
+    width: 80%;
+    background-color: rgb(247, 160, 129);
+}
+#mapspace{
+    height: 80%;
+    background-color: rgb(255, 208, 0);
+}
+#infoterr{
+    height: 20%;
+    background-color: bisque;
+}
+
+/*Panel derech*/
+#cuerpoderech{
+    width: 20%;
+    background-color: cyan;
+}
