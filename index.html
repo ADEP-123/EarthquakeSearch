@@ -5,22 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <script src="controllers/iniciador.js" defer type="module"></script>
     <title>EarthQuakeSearch</title>
   </head>
   <body>
-    <div id="header">
-
-    </div>
+    <div id="header"></div>
 
     <div id="cuerpo">
-        <div id="cuerpoizq">
-            <div id="mapspace"></div>
-            <div id="infoterr"></div>
+      <div id="cuerpoizq">
+        <div id="mapspace"></div>
+        <div id="infoterr"></div>
+      </div>
+      <div id="cuerpoderech">
+        <div id="reglas">
+          <h1>Datos de interes:</h1>
+        <p> <b>Reglas:</b><br>
+          Ingrese los datos de interes a consultar acerca de los ultimos
+          movimientos sismicos de la siguiente manera:
+          <ul>
+            <li>
+              En cantidad ingrese de 1 a 100 la cantidad de registros a generar
+            </li>
+            <li>
+              Si desea generarlos en todo el mundo seleccione
+              el tipo de entrada global
+            </li>
+            <li>
+              En la magnitud digite la magnitud minima del movimiento que desea buscar, si no desea limitarlo deje vacio el espacio.
+            </li>
+          </ul>
+        </p>
         </div>
-        <div id="cuerpoderech">
-          
-        </div>
-
+        <div id="datos">
+          <form action="">
+            <label for="cant">Cantidad:</label>
+            <input type="number" name="cant" id="cant" />
+            <br />
+            <label for="tipEntr">Tipo de Entrada:</label>
+            <select name="tipEntr" id="tipEntr">
+              <option value="1">Global</option>
+              <option value="2">Especifico</option>
+            </select>
+            <br />
+            <label for="lat">Latitud:</label>
+            <input type="number" name="lat" id="lat" />
+            <br />
+            <label for="long">Longitud:</label>
+            <input type="number" name="long" id="long" />
+            <br />
+            <label for="rad">Radio de busqueda:</label>
+            <input type="number" name="rad" id="rad" />
+            <br />
+            <label for="mag">Magnitud</label>
+            <input type="number" name="mag" id="mag" />
+          </form>
+          <input type="button" value="Agregar" name="Agregar" id="agregar">
+          <input type="button" value="Limpiar" name="limpiar" id="limpiar">
+        </div>   
+      </div>
     </div>
   </body>
 </html>
