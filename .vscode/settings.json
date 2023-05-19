@@ -4,6 +4,7 @@
     "controlador",
     "tipoEntrada",
     "iniciador",
-    "fetch"
+    "fetch",
+    "cardspace"
   ]
 }
