@@ -1,6 +1,6 @@
-async function fetch() {
-  const url =
-    "https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=25&type=earthquake&latitude=33.962523&longitude=-118.3706975&radius=1000&units=kilometers&magnitude=3";
+async function fetch(formu) {
+  const url1 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${formu.cant}&type=earthquake&latitude=${formu.lat}&longitude=${formu.long}&radius=${formu.rad}&units=kilometers&magnitude=${formu.mag}`;
+  const url2 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${formu.cant}&type=earthquake&units=kilometers&magnitude=${formu.mag}`;
   const options = {
     method: "GET",
     headers: {
@@ -10,7 +10,12 @@ async function fetch() {
   };
 
   try {
-    const response = await fetch(url, options);
+    if (formu.tipEntr === "1") {
+      const response = await fetch(url1, options);
+    } else {
+      const response = await fetch(url2, options);
+    }
+
     const result = await response.text();
     console.log(result);
   } catch (error) {
