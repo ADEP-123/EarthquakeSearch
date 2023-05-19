@@ -3,6 +3,7 @@
     "form",
     "controlador",
     "tipoEntrada",
-    "iniciador"
+    "iniciador",
+    "fetch"
   ]
 }
