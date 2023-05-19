@@ -15,7 +15,19 @@
       <div id="cuerpoizq">
         <div id="mapspace">
           <div id="mapreal"></div>
-          <div id="infoterr"></div>
+          <div id="infoterr">
+            <table border="1px">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Profundidad</th>
+                  <th>Latitud</th>
+                  <th>Longitud</th>
+                  <th>Lugar</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
         <div id="cardspace"> 
         </div>
@@ -36,7 +48,7 @@
               el tipo de entrada global
             </li>
             <li>
-              En la magnitud digite la magnitud minima del movimiento que desea buscar, si no desea limitarlo deje vacio el espacio.
+              En la magnitud digite la magnitud minima del movimiento que desea buscar, si no desea limitarlo digite 0.
             </li>
           </ul>
         </p>
@@ -63,7 +75,7 @@
             <input type="number" name="rad" id="rad" />
             <br />
             <label for="mag">Magnitud</label>
-            <input type="number" name="mag" id="mag" />
+            <input type="number" name="mag" id="mag" placeholder="0"/>
             <input type="button" value="Agregar" name="Agregar" id="agregar">
             <input type="button" value="Limpiar" name="limpiar" id="limpiar">
 

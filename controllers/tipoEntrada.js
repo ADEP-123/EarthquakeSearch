@@ -1,5 +1,4 @@
-export function tipoEntrada(formu) {
-  const datos = Object.fromEntries(new FormData(formu));
+export function tipoEntrada(datos) {
   const latitud = document.getElementById("lat");
   const longitud = document.getElementById("long");
   const radioBusqueda = document.getElementById("rad");
