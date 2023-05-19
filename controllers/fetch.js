@@ -1,7 +1,15 @@
 import { cardCreator } from "./cardCreator.js";
-export async function fetch(formu) {
-  const url1 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${formu.cant}&type=earthquake&latitude=${formu.lat}&longitude=${formu.long}&radius=${formu.rad}&units=kilometers&magnitude=${formu.mag}`;
-  const url2 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${formu.cant}&type=earthquake&magnitude=${formu.mag}`;
+export async function llamar(datos) {
+  const url1 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${Number(
+    datos.cant
+  )}&type=earthquake&latitude=${Number(datos.lat)}&longitude=${Number(
+    datos.long
+  )}&radius=${Number(datos.rad)}&units=kilometers&magnitude=${Number(
+    datos.mag
+  )}`;
+  const url2 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${Number(
+    datos.cant
+  )}&type=earthquake&magnitude=${Number(datos.mag)}`;
   const options = {
     method: "GET",
     headers: {
@@ -11,13 +19,15 @@ export async function fetch(formu) {
   };
 
   try {
-    if (formu.tipEntr === "1") {
-      const response = await fetch(url1, options);
+    let response;
+    if (datos.tipEntr === "1") {
+      response = await fetch(url2, options);
     } else {
-      const response = await fetch(url2, options);
+      response = await fetch(url1, options);
     }
 
     const result = await response.json();
+    console.log(result);
     cardCreator(result);
   } catch (error) {
     console.error(error);
