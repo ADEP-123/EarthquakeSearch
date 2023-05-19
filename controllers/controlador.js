@@ -1,11 +1,12 @@
+import { fetch } from "./fetch.js";
+import { mapPush} from "./mappush.js"
 export function controlador(formu, event) {
   console.log(event.target.value);
-  let url = "";
   let datos = Object.fromEntries(new FormData(formu));
   switch (event.target.value) {
     case "Agregar":
-      url = URL + entidad;
-      get(url, datos);
+      console.log(datos);
+      //fetch(formu)
       formu.reset();
       break;
     case "Limpiar":
