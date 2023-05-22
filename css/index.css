@@ -45,7 +45,13 @@ body{
 #infoterr{
     height: 20%;
     background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
+}
+#infoterr td{
+    text-align: center;
 }
 #cardspace{
     height: 20%;
