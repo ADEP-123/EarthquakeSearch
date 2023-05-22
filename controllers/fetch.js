@@ -2,14 +2,14 @@ import { cardCreator } from "./cardCreator.js";
 import { smallCardCreat } from "./cardCreator.js";
 export async function llamar(datos) {
   console.log("entra")
-  const url1 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${Number(
+  const url2 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${Number(
     datos.cant
   )}&type=earthquake&latitude=${Number(datos.lat)}&longitude=${Number(
     datos.long
   )}&radius=${Number(datos.rad)}&units=kilometers&magnitude=${Number(
     datos.mag
   )}`;
-  const url2 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${Number(
+  const url1 = `https://everyearthquake.p.rapidapi.com/recentEarthquakes?interval=P1Y2M3W4DT1H2M3S&count=${Number(
     datos.cant
   )}&type=earthquake&magnitude=${Number(datos.mag)}`;
   const options = {
@@ -23,15 +23,15 @@ export async function llamar(datos) {
   try {
     let response;
     if (datos.tipEntr === "1") {
-      response = await fetch(url2, options);
-    } else {
       response = await fetch(url1, options);
+    } else {
+      response = await fetch(url2, options);
     }
 
     const result = await response.json();
     console.log(result);
-    cardCreator(result.data[0].latitude,result.data[0].longitude);
-    smallCardCreat(result.data)
+    cardCreator(result);
+    smallCardCreat(result)
   } catch (error) {
     console.error(error);
   }

@@ -10,7 +10,7 @@ export function controlador(formu, event, datos) {
             "Digite la cantidad y la magnitud, recuerde que la magnitud debe ser mayor o igual a o"
           );
         }
-        //llamar(datos);
+        llamar(datos);
         formu.reset();
       } else {
         if (

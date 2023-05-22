@@ -5,6 +5,7 @@
     "tipoEntrada",
     "iniciador",
     "fetch",
-    "cardspace"
+    "cardspace",
+    "infoterr"
   ]
 }
