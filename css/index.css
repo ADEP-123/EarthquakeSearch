@@ -6,12 +6,38 @@
 body{
     height: 100vh;
     width: 100%;
-
 }
+
 /*Header*/
 #header{
     height: 15%;
-    background-color: blueviolet;
+    width: 100%;
+    background: #cdb6a0;
+    border: 1px solid black;
+}
+#logocont{
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+#titulocont{
+    width: 75%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+}
+#logo{
+    height: 90%;
+    border-radius: 100em;
+    border: 2px solid black;
+    margin: 2%;
+    margin-left: 10%;
+}
+#titulo{
+    align-items: center;
+    margin-left: 10%;
 }
 
 /*Cuerpo*/
@@ -24,19 +50,26 @@ body{
     width: 75%;
     height: 100%;
     float: left;
-    background-color: rgb(247, 160, 129);
-    
+    background-color: rgb(247, 160, 129);  
 }
 
 #mapspace{
     height: 80%;
     width: 100%;
-    background-color: rgb(255, 208, 0);
-    float: left;
+    float: left;  
 }
 #mapreal{
     height: 80%;
-    background-color: blue;
+    background: rgb(244,215,187);
+    background: linear-gradient(0deg, rgba(244,215,187,1) 1%, rgba(205,182,160,1) 69%);
+    border: 1px solid black;
+}
+#map{
+    height: 100%;
+    margin-left: 26%;
+    border: 10px solid black;
+    border-style: inset;
+
 }
 #tarj0{
     height: 100%;
@@ -44,26 +77,29 @@ body{
 }
 #infoterr{
     height: 20%;
-    background-color: bisque;
+    background-color: #cdb6a0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    border: 1px solid black;    
 }
 #infoterr td{
     text-align: center;
 }
+#infoterr table{
+    background-color: #f4d7bb;
+}
 #cardspace{
     height: 20%;
     width: 100%;
-    background-color: pink;
+    background-color: #cdb6a0;
     float: left;
     overflow-x: auto;
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: flex-end;
-
+    border: 1px solid black;
 }
 .tarj{
     width: auto;
@@ -71,7 +107,7 @@ body{
     border-radius: 10%;
     border: 1px solid black;
     text-align: center;
-    background-color: white;
+    background-color: bisque;
     margin-left: 1%;
     margin-top: 0.5%;
     font-size:small;
@@ -91,8 +127,6 @@ body{
     padding-left: 5%;
 }
 
-
-
 /*Panel derech*/
 #cuerpoderech{
     width: 25%;
@@ -100,7 +134,8 @@ body{
     float: right;
     padding-left: 0.5%;
     padding-right: 0.5%;
-
+    border: 1px solid black;
+    background: #cdb6a0;
 }
 #formdatos{
     display: flex;
@@ -115,6 +150,11 @@ body{
 #datos input{
     width: 61%;
     align-items: left;
+    background-color: bisque;
+}
+#datos select{
+    background-color: bisque;
+    border: 1px solid black;
 }
 .inbutton{
     max-width: 40%;
