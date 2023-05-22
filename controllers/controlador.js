@@ -1,6 +1,5 @@
 import { llamar } from "./fetch.js";
 export function controlador(formu, event, datos) {
-  console.log(event.target.value);
   switch (event.target.value) {
     case "Agregar":
       if (datos.tipEntr === "") {
@@ -26,7 +25,7 @@ export function controlador(formu, event, datos) {
             "Todos los campos son necesarios, recuerde que la magnitud debe ser mayor o igual a o"
           );
         }
-        //llamar(datos);
+        llamar(datos);
         formu.reset();
       }
       break;

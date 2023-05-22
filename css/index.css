@@ -38,7 +38,7 @@ body{
     height: 80%;
     background-color: blue;
 }
-#mapa{
+#tarj0{
     height: 100%;
     width: 100%;
 }
@@ -60,17 +60,20 @@ body{
 
 }
 .tarj{
-    width: 10%;
-    height: 80%;
+    width: 15%;
+    height: 90%;
     border-radius: 10%;
     border: 1px solid black;
     text-align: center;
     background-color: white;
     margin-left: 1%;
-    margin-top: 1%;
+    margin-top: 0.5%;
     font-size:small;
     float: left;
     display: inline
+}
+.tarj:hover{
+    box-shadow: 2px 2px 2px black;
 }
 #reglas{
     text-align: justify;
