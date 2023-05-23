@@ -8,6 +8,7 @@ body{
     width: 100%;
 }
 
+
 /*Header*/
 #header{
     height: 15%;
@@ -101,6 +102,27 @@ body{
     justify-content: flex-end;
     border: 1px solid black;
 }
+#cardspace::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+#cardspace::-webkit-scrollbar-button:increment,#cardspace::-webkit-scrollbar-button {
+    display: none;
+} 
+
+#cardspace::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+#cardspace::-webkit-scrollbar-thumb {
+    background-color: #f4d7bb;
+    border-radius: 20px;
+    border: 2px solid rgb(155, 149, 144);
+}
+#cardspace::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
 .tarj{
     width: auto;
     height: 90%;
